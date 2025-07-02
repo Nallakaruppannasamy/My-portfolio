@@ -1,0 +1,32 @@
+.custom-title{
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .title-text{
+    color: white;
+} */
+
+.highlighted-text{
+    /* color: white; */
+    font-weight: 500;
+}
+
+.text-line{
+    width: 2rem;
+    height: 1px;
+    background-color: white;
+}
+
+@media (min-width: 640px){
+    .text-line{
+        width: 3rem;
+        height: 2px;
+    }
+}

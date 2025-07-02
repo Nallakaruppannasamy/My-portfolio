@@ -1,0 +1,116 @@
+.hero-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh;
+    padding-top: 80px;
+    background-color: #2A2A32;
+    color: white;
+}
+
+.hero-text {
+  flex: 1;
+  padding: 20px;
+  margin: 20px;
+  text-align: start;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span{
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.hero-action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 30px;
+}
+
+.hero-connect{
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid #06b6d4;
+    /* background: linear-gradient(to right, #ff6a00, #ee0979); */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-connect:hover{
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    transform: scale(1.05);
+}
+
+.hero-resume{
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: 2px solid #06b6d4;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-resume:hover{
+    background: linear-gradient(to right, #ff6a00, #ee0979);
+    transform: scale(1.05);
+}
+
+.hero-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    /* padding: 20px; */
+    margin: 0 auto;
+    display: block;
+    border: 2px #06b6d4 solid;
+    box-shadow: 0 4px 25px #06b6d4; 
+    /* object-fit: cover;  */
+}
+
+/* Media Query */
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding-top: 200px;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    margin-top: 2rem;
+  }
+
+  .profile-img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-action{
+    flex-direction: column;
+  }
+
+  .hero-resume{
+    padding: 15px 55px;
+  }
+}
