@@ -1,12 +1,15 @@
 .navbar h1 {
-  font-family: "Prata", serif;
-  font-weight: 400;
-  font-style: normal;
   transition: transform 0.3s ease;
+  background: linear-gradient(90deg, #f953c6, #b91d73);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 .navbar h1:hover{
     transform: scale(1.2);
+    cursor: pointer;
 }
 
 .navbar {
@@ -40,7 +43,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.navbar-link hr {
+/* .navbar-link hr {
   width: 50%;     
   height: 1.5px;
   margin: 5px auto;
@@ -53,7 +56,7 @@
 .navbar-link:hover hr {
   transform: scaleX(1.2);
   background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
-}
+} */
 
 .anchor-link{
   text-decoration: none;

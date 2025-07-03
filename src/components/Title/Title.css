@@ -9,24 +9,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-/* .title-text{
-    color: white;
-} */
-
 .highlighted-text{
     /* color: white; */
     font-weight: 500;
-}
-
-.text-line{
-    width: 2rem;
-    height: 1px;
-    background-color: white;
-}
-
-@media (min-width: 640px){
-    .text-line{
-        width: 3rem;
-        height: 2px;
-    }
 }

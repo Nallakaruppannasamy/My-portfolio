@@ -6,8 +6,6 @@ const Title = ({ text1, text2 }) => {
     <div className='custom-title'>
 
         <p className='title-text'>{text1}<span className='highlighted-text'>{text2}</span></p>
-
-        <p className='text-line'></p>
       
     </div>
   )

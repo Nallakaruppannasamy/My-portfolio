@@ -42,7 +42,7 @@ const Education = () => {
   return (
     <div>
       <div id="education" className="education-title-component" data-aos="fade-down">
-        <Title text1={"EDUCATIONAL"} text2={" QUALIFIACTION"} />
+        <Title text1={"EDUCATIONAL"} text2={" QUALIFICATION"} />
       </div>
       <div className="education-section" data-aos="fade-up">
         {educationData.map((edu, index) => (

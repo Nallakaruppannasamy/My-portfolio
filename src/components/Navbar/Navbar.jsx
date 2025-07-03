@@ -6,7 +6,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
 
-  const [menu,setMenu] =useState("home");
+  const [menu,setMenu] = useState("home");
 
   return (
     <div className="navbar">
@@ -16,27 +16,21 @@ const Navbar = () => {
         <ul>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" href="#home"><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>
-            <hr />
           </li>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#about"><p onClick={()=>setMenu("about")}>About</p></AnchorLink>
-            <hr />
           </li>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#education"><p onClick={()=>setMenu("education")}>Education</p></AnchorLink>
-            <hr />
           </li>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#skills"><p onClick={()=>setMenu("skills")}>Skills</p></AnchorLink>
-            <hr />
           </li>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#projects"><p onClick={()=>setMenu("projects")}>Projects</p></AnchorLink>
-            <hr />
           </li>
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>
-            <hr />
           </li>
 
           <div className="navbar-menu-toggle" onClick={() => setVisible(true)}>

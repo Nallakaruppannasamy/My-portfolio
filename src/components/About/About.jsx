@@ -21,15 +21,11 @@ const About = () => {
 
       <div className="description" data-aos="fade-up">
         <p>
-          👋 Hello! I'm a Electronics and Communication Engineering (ECE) student at Sathyabama Institute of Science and Technology, driven by a strong passion for Information Technology tools and modern
-          software development. ⚙️💻 Although my academic journey is rooted in electronics, I’ve always been fascinated by the way software
-          transforms ideas into reality. I actively explore full-stack development, version control systems like Git and GitHub, UI/UX
-          principles, and cloud deployment tools. 🌐🚀 I enjoy crafting user-friendly digital experiences, solving real-world problems through
-          code, and merging hardware knowledge with innovative software solutions. My goal is to bridge the gap between electronics and
-          intelligent IT systems to contribute to smarter, more efficient technology. 🔌📲 I constantly engage in hands-on learning through
-          online platforms, project work, and team collaborations to sharpen my technical and problem-solving skills. Whether it's building web apps,
-          experimenting with automation, or understanding IoT systems, I’m always eager to grow and take on new challenges. 💡✨ I'm currently open to internships, collaborations, and learning opportunities where
-          I can apply and enhance my skills. Let’s connect and build something impactful together! 🤝🙂
+          🚀 I'm a second-year Electronics and Communication Engineering (ECE) student at Sathyabama Institute of Science and Technology (SIST), Chennai, with a strong passion for web development and modern tech.
+💻 I'm currently learning and building full-stack projects using the MERN stack — MongoDB, Express.js, React, and Node.js — along with tools like Vite, Tailwind CSS, and GitHub.
+🎯 I enjoy designing responsive user interfaces and developing real-world applications that are clean, efficient, and user-friendly.
+🌱 I'm a dedicated learner who’s always exploring new tools, improving my skills, and taking on practical challenges to grow as a developer.
+🤝 I’m open to internships, collaborations, and opportunities where I can contribute, learn, and build meaningful solutions with enthusiastic teams.
         </p>
 
         <div className="social-icons">

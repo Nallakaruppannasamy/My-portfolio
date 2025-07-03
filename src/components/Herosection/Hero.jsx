@@ -9,7 +9,8 @@ const Hero = () => {
       {/* Left side of the hero section */}
       <div className="hero-text">
         <h1><span>Hello, I'm Nallakaruppannasamy</span></h1>
-        <p>I'm a MERN Stack enthusiast and ECE student passionate about IT tools and modern web development.</p>
+        {/* <p>I'm a MERN Stack enthusiast and ECE student passionate about IT tools and modern web development.</p> */}
+        <p>MERN Stack Learner | ECE Student | Passionate Web Developer in Progress | Creating Real Projects | Future Full Stack Developer </p>
         <div className="hero-action">
             <div className="hero-connect"><AnchorLink className="anchor-link" offset={50} href="#contact">Connect with Me</AnchorLink></div>
             <div className="hero-resume">My Resume</div>

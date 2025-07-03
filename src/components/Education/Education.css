@@ -17,7 +17,7 @@
   justify-content: space-between;
   background-color: #2a2a32;
   padding: 25px;
-  margin: 45px;
+  /* margin: 45px; */
   margin-top: 15px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
@@ -75,5 +75,12 @@
 @media (max-width: 480px) {
   .education-title-component {
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .education-card{
+    margin: 45px;
+    margin-top: 10px;
   }
 }
