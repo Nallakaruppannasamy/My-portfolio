@@ -54,7 +54,7 @@ const Contact = () => {
         {/* Left Side */}
         <div className="contact-left">
           <h1>Let's talk</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad suscipit nostrum mollitia vel reprehenderit quidem placeat tempora odit repellat.</p>
+          <p>I'm always open to new opportunities, collaborations, or just a friendly tech chat! Whether you have a project in mind or just want to connect, feel free to reach out. Let’s build something amazing together!</p>
           <div className="contact-details">
             <div className="contact-detail">
               <img src={assets.mail_logo} alt="email" />
