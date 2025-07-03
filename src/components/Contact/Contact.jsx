@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './Contact.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Title from "../Title/Title";
 import { assets } from '../../assets/assets';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Contact = () => {
+  const formRef = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -26,7 +30,10 @@ const Contact = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      alert(res.message);
+      toast.success("Message sent successfully!");
+      formRef.current.reset(); // ✅ Reset form after success
+    } else {
+      toast.error("Failed to send message.");
     }
   };
 
@@ -44,8 +51,7 @@ const Contact = () => {
       </div>
 
       <div className="contact-section" data-aos="fade-up">
-
-        {/* Left side */}
+        {/* Left Side */}
         <div className="contact-left">
           <h1>Let's talk</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ad suscipit nostrum mollitia vel reprehenderit quidem placeat tempora odit repellat.</p>
@@ -65,17 +71,22 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Right side form */}
-        <form onSubmit={onSubmit} className="contact-right">
-          <label htmlFor="">Your Name:</label>
+        {/* Right Side */}
+        <form ref={formRef} onSubmit={onSubmit} className="contact-right">
+          <label>Your Name:</label>
           <input type="text" placeholder='Enter your name' name='name' required />
-          <label htmlFor="">Your Email:</label>
+          
+          <label>Your Email:</label>
           <input type="email" placeholder='Enter your email' name='email' required />
-          <label htmlFor="">Write your message here</label>
+          
+          <label>Write your message here</label>
           <textarea name="message" rows="8" placeholder='Enter your message' required></textarea>
+          
           <button type='submit' className='contact-submit'>Submit Now</button>
         </form>
       </div>
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick pauseOnFocusLoss draggable pauseOnHover theme="dark"/>
+
     </div>
   );
 };
