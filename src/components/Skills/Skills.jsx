@@ -33,7 +33,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <section className="skills-section">
+    <section id="skills" className="skills-section">
       <div className="skill-title-component" data-aos="fade-down">
         <Title text1={"MY"} text2={" SKILLS"} />
       </div>

@@ -27,13 +27,14 @@
   column-gap: 40px;
 }
 
-.navbar-link a {
+.navbar-link p {
   text-decoration: none;
   color: #ffffff;
 }
 
-.navbar-link a:hover {
+.navbar-link p:hover {
   background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+  cursor: pointer;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,6 +53,11 @@
 .navbar-link:hover hr {
   transform: scaleX(1.2);
   background: linear-gradient(270deg, #DF8908 10%, #B415FF 100%);
+}
+
+.anchor-link{
+  text-decoration: none;
+  color: #ffffff;
 }
 
 .navbar-menu-toggle {

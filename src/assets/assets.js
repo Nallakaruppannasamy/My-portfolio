@@ -12,6 +12,9 @@ import github_logo from './GITHUB_logo.svg'
 import python_logo from './PYTHON_logo.svg'
 import excel_logo from './EXCEL_logo.svg'
 import canva_logo from './CANVA_logo.svg'
+import mail_logo from './MAIL_logo.svg'
+import call_logo from './CALL_logo.png'
+import location_logo from './LOCATION_logo.png'
 
 
 export const assets = {
@@ -29,4 +32,7 @@ export const assets = {
     python_logo,
     excel_logo,
     canva_logo,
+    mail_logo,
+    call_logo,
+    location_logo,
 }

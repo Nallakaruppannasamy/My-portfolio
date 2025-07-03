@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
+
+  const [menu,setMenu] =useState("home");
 
   return (
     <div className="navbar">
@@ -12,27 +15,27 @@ const Navbar = () => {
       <div className="navbar-links">
         <ul>
           <li className="navbar-link">
-            <a href="#">Home</a>
+            <AnchorLink className="anchor-link" href="#home"><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>
             <hr />
           </li>
           <li className="navbar-link">
-            <a href="#">About</a>
+            <AnchorLink className="anchor-link" offset={50} href="#about"><p onClick={()=>setMenu("about")}>About</p></AnchorLink>
             <hr />
           </li>
           <li className="navbar-link">
-            <a href="#">Education</a>
+            <AnchorLink className="anchor-link" offset={50} href="#education"><p onClick={()=>setMenu("education")}>Education</p></AnchorLink>
             <hr />
           </li>
           <li className="navbar-link">
-            <a href="#">Skills</a>
+            <AnchorLink className="anchor-link" offset={50} href="#skills"><p onClick={()=>setMenu("skills")}>Skills</p></AnchorLink>
             <hr />
           </li>
           <li className="navbar-link">
-            <a href="#">Projects</a>
+            <AnchorLink className="anchor-link" offset={50} href="#projects"><p onClick={()=>setMenu("projects")}>Projects</p></AnchorLink>
             <hr />
           </li>
           <li className="navbar-link">
-            <a href="#">Contact</a>
+            <AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>
             <hr />
           </li>
 
