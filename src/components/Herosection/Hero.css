@@ -4,7 +4,7 @@
     justify-content: space-between;
     min-height: 80vh;
     padding-top: 80px;
-    background-color: #2A2A32;
+    background-color: #1f1f28;
     color: white;
 }
 
@@ -91,7 +91,7 @@
 
 @media (max-width: 768px) {
   .hero-container {
-    padding-top: 200px;
+    /* padding-top: 200px; */
     flex-direction: column-reverse;
     text-align: center;
   }

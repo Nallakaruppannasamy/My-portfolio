@@ -1,12 +1,12 @@
 .about-me {
   min-height: 100vh;
-  background-color: 2A2A32; 
+  background-color: #1f1f28; 
   color: #f1f5f9;
   padding: 60px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Segoe UI', sans-serif;
+  /* font-family: 'Segoe UI', sans-serif; */
 }
 
 .title-component {

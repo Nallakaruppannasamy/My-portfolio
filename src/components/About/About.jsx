@@ -33,9 +33,9 @@ const About = () => {
         </p>
 
         <div className="social-icons">
-          <a href="https://www.linkedin.com/in/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"> <FaLinkedin /> </a>
-          <a href="https://www.instagram.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"> <FaInstagram /> </a>
-          <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer"> <FaGithub /> </a>
+          <a href="https://www.linkedin.com/in/nallakaruppannasamyr/" target="_blank" rel="noopener noreferrer"> <FaLinkedin /> </a>
+          <a href="https://www.instagram.com/_rnks_007/" target="_blank" rel="noopener noreferrer"> <FaInstagram /> </a>
+          <a href="https://github.com/Nallakaruppannasamy" target="_blank" rel="noopener noreferrer"> <FaGithub /> </a>
         </div>
       </div>
     </div>
