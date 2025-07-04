@@ -22,7 +22,7 @@ const About = () => {
       <div className="description" data-aos="fade-up">
         <p>🚀 I'm a <strong>Electronics and Communication Engineering (ECE) student</strong> at <strong>Sathyabama Institute of Science and Technology (SIST), Chennai</strong> with a growing passion for <strong>web development</strong> and modern technologies.</p>
 
-        <p>💻 I’m currently building <strong>full-stack projects</strong> using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js), along with tools like <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>GitHub</strong>.</p>
+        <p>💻 I’m currently building <strong>full-stack projects</strong> using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js) along with tools like <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>GitHub</strong>.</p>
 
         <p>🎯 I focus on building <strong>responsive, user-centric interfaces</strong> and delivering <strong>efficient front-end experiences</strong> in real-world applications.</p>
 
