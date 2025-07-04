@@ -60,6 +60,8 @@
     padding: 15px 30px;
     border-radius: 50px;
     border: 2px solid #06b6d4;
+    text-decoration: none;
+    color: #ccc;
     cursor: pointer;
     transition: transform 0.3s ease;
 }

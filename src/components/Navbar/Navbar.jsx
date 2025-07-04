@@ -26,9 +26,9 @@ const Navbar = () => {
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#skills"><p onClick={()=>setMenu("skills")}>Skills</p></AnchorLink>
           </li>
-          <li className="navbar-link">
+          {/* <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#projects"><p onClick={()=>setMenu("projects")}>Projects</p></AnchorLink>
-          </li>
+          </li> */}
           <li className="navbar-link">
             <AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>
           </li>
@@ -46,22 +46,22 @@ const Navbar = () => {
 
         <div className="side-navbar-links">
           <p className="side-navbar-link">
-            <a href="#">Home</a>
+            <AnchorLink className="anchor-link" href="#home"><p onClick={()=>setMenu("home")}>Home</p></AnchorLink>
           </p>
           <p className="side-navbar-link">
-            <a href="#">About</a>
+            <AnchorLink className="anchor-link" offset={50} href="#about"><p onClick={()=>setMenu("about")}>About</p></AnchorLink>
           </p>
           <p className="side-navbar-link">
-            <a href="#">Education</a>
+            <AnchorLink className="anchor-link" offset={50} href="#education"><p onClick={()=>setMenu("education")}>Education</p></AnchorLink>
           </p>
           <p className="side-navbar-link">
-            <a href="#">Skills</a>
+            <AnchorLink className="anchor-link" offset={50} href="#skills"><p onClick={()=>setMenu("skills")}>Skills</p></AnchorLink>
           </p>
+          {/* <p className="side-navbar-link">
+            <AnchorLink className="anchor-link" offset={50} href="#projects"><p onClick={()=>setMenu("projects")}>Projects</p></AnchorLink>
+          </p> */}
           <p className="side-navbar-link">
-            <a href="#">Projects</a>
-          </p>
-          <p className="side-navbar-link">
-            <a href="#">Contact</a>
+            <AnchorLink className="anchor-link" offset={50} href="#contact"><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>
           </p>
         </div>
       </div>

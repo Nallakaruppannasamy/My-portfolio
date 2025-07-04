@@ -14,6 +14,7 @@ const skills = [
   { name: "BootStrap CSS", logo: assets.bootstrap_logo },
   { name: "Tailwind CSS", logo: assets.tailwindcss_logo },
   { name: "Node.js", logo: assets.nodejs_logo },
+  { name: "Express.js", logo: assets.expressjs_logo },
   { name: "MongoDB", logo: assets.mongodb_logo },
   { name: "MySql", logo: assets.mysql_logo },
   { name: "Git", logo: assets.git_logo },

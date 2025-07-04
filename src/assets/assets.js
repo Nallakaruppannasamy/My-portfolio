@@ -15,6 +15,7 @@ import canva_logo from './CANVA_logo.svg'
 import mail_logo from './MAIL_logo.svg'
 import call_logo from './CALL_logo.png'
 import location_logo from './LOCATION_logo.png'
+import expressjs_logo from './EXPRESSJS_logo.svg'
 
 
 export const assets = {
@@ -35,4 +36,5 @@ export const assets = {
     mail_logo,
     call_logo,
     location_logo,
+    expressjs_logo
 }

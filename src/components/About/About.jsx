@@ -20,13 +20,15 @@ const About = () => {
       </div>
 
       <div className="description" data-aos="fade-up">
-        <p>
-          🚀 I'm a second-year Electronics and Communication Engineering (ECE) student at Sathyabama Institute of Science and Technology (SIST), Chennai, with a strong passion for web development and modern tech.
-          💻 I'm currently learning and building full-stack projects using the MERN stack — MongoDB, Express.js, React, and Node.js — along with tools like Vite, Tailwind CSS, and GitHub.
-          🎯 I enjoy designing responsive user interfaces and developing real-world applications that are clean, efficient, and user-friendly.
-          🌱 I'm a dedicated learner who’s always exploring new tools, improving my skills, and taking on practical challenges to grow as a developer.
-          🤝 I’m open to internships, collaborations, and opportunities where I can contribute, learn, and build meaningful solutions with enthusiastic teams.
-        </p>
+        <p>🚀 I'm a <strong>Electronics and Communication Engineering (ECE) student</strong> at <strong>Sathyabama Institute of Science and Technology (SIST), Chennai</strong> with a growing passion for <strong>web development</strong> and modern technologies.</p>
+
+        <p>💻 I’m currently building <strong>full-stack projects</strong> using the <strong>MERN stack</strong> (MongoDB, Express.js, React, Node.js), along with tools like <strong>Vite</strong>, <strong>Tailwind CSS</strong>, and <strong>GitHub</strong>.</p>
+
+        <p>🎯 I focus on building <strong>responsive, user-centric interfaces</strong> and delivering <strong>efficient front-end experiences</strong> in real-world applications.</p>
+
+        <p>🔎 As a self-driven learner, I constantly explore <strong>new tools</strong>, sharpen my <strong>JavaScript and React</strong> skills, and tackle <strong>practical challenges</strong> to grow as a developer.</p>
+
+        <p>🤝 I’m actively seeking <strong>internships</strong>, <strong>collaborations</strong>, or project opportunities where I can <strong>contribute</strong>, <strong>learn</strong>, and build impactful solutions with passionate teams.</p>
 
         <div className="social-icons">
           <a href="https://www.linkedin.com/in/nallakaruppannasamyr/" target="_blank" rel="noopener noreferrer"> <FaLinkedin /> </a>
