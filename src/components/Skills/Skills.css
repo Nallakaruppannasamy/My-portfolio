@@ -48,3 +48,29 @@
   font-weight: 500;
   color: #cbd5e1;
 }
+
+@media (max-width:468px){
+  .skill-title-component{
+    font-size: 1.5rem;
+  }
+
+  .skills-grid{
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .skill-card{
+    width: 100px;
+    padding: 15px;
+  }
+
+  .skill-logo{
+    width: 75px;
+    height: 75px;
+  }
+
+  .skill-name{
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
