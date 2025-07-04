@@ -54,7 +54,8 @@ const Contact = () => {
         {/* Left Side */}
         <div className="contact-left">
           <h1>Let's talk</h1>
-          <p>I'm always open to new opportunities, collaborations, or just a friendly tech chat! Whether you have a project in mind or just want to connect, feel free to reach out. Let’s build something amazing together!</p>
+          <p>I'm always open to <strong>exciting opportunities</strong>, <strong>meaningful collaborations</strong>, or simply a <strong>tech-focused conversation</strong>.  
+  Whether you're planning a project or just want to connect, feel free to reach out — let’s create something impactful together.</p>
           <div className="contact-details">
             <div className="contact-detail">
               <img src={assets.mail_logo} alt="email" />
@@ -73,14 +74,14 @@ const Contact = () => {
 
         {/* Right Side */}
         <form ref={formRef} onSubmit={onSubmit} className="contact-right">
-          <label>Your Name:</label>
+          <label>Full Name:</label>
           <input type="text" placeholder='Enter your name' name='name' required />
           
-          <label>Your Email:</label>
+          <label>Email Address:</label>
           <input type="email" placeholder='Enter your email' name='email' required />
           
-          <label>Write your message here:</label>
-          <textarea name="message" rows="8" placeholder='Enter your message' required></textarea>
+          <label>Let’s Start the Conversation:</label>
+          <textarea name="message" rows="8" placeholder="Tell me about your project, idea, or question..." required></textarea>
           
           <button type='submit' className='contact-submit'>Submit Now</button>
         </form>
