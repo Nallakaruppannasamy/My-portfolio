@@ -43,6 +43,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+.anchor-link.active {
+  font-weight: bold;
+  color: #38bdf8; /* Sky blue or your theme color */
+}
+
+
 /* .navbar-link hr {
   width: 50%;     
   height: 1.5px;

@@ -6,6 +6,7 @@ import Education from './components/Education/Education'
 import Skills from './components/Skills/Skills'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 
 
 const App = () => {
@@ -18,6 +19,8 @@ const App = () => {
       <Skills />
       {/* <Projects /> */}
       <Contact />
+
+      <ScrollToTop />
     </div>
   )
 }
