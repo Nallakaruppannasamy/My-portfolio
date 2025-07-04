@@ -20,15 +20,13 @@ const About = () => {
       </div>
 
       <div className="description" data-aos="fade-up">
-        <p>🚀 I'm a <strong>Electronics and Communication Engineering (ECE) student</strong> at Sathyabama Institute of Science and Technology (SIST), chennai, with a strong passion for web development and modern tech.</p>
-         <br />
-        <p>💻 I'm currently learning and building full-stack projects using the MERN stack — MongoDB, Express.js, React, and Node.js — along with tools like Vite, Tailwind CSS, and GitHub.</p>
-         <br />
-        <p>🎯 I enjoy designing responsive user interfaces and developing real-world applications that are clean, efficient, and user-friendly.</p>
-         <br />
-        <p>🌱 I'm a dedicated learner who’s always exploring new tools, improving my skills, and taking on practical challenges to grow as a developer.</p>
-         <br />
-        <p>🤝 I’m open to internships, collaborations, and opportunities where I can contribute, learn, and build meaningful solutions with enthusiastic teams.</p>
+        <p>
+          🚀 I'm a second-year Electronics and Communication Engineering (ECE) student at Sathyabama Institute of Science and Technology (SIST), Chennai, with a strong passion for web development and modern tech.
+          💻 I'm currently learning and building full-stack projects using the MERN stack — MongoDB, Express.js, React, and Node.js — along with tools like Vite, Tailwind CSS, and GitHub.
+          🎯 I enjoy designing responsive user interfaces and developing real-world applications that are clean, efficient, and user-friendly.
+          🌱 I'm a dedicated learner who’s always exploring new tools, improving my skills, and taking on practical challenges to grow as a developer.
+          🤝 I’m open to internships, collaborations, and opportunities where I can contribute, learn, and build meaningful solutions with enthusiastic teams.
+        </p>
 
         <div className="social-icons">
           <a href="https://www.linkedin.com/in/nallakaruppannasamyr/" target="_blank" rel="noopener noreferrer"> <FaLinkedin /> </a>
