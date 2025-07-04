@@ -120,3 +120,26 @@
         display: none;
     }
 }
+
+@media (max-width:768px){
+  .navbar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .navbar h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-links ul {
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .navbar-link {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+}
