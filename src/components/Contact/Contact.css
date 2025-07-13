@@ -195,11 +195,17 @@
     font-size: 18px;
   }
 
-  .contact-right input,
-  .contact-right textarea {
-    width: 100%;
+  .contact-right input{
+    width: 80%;
+    height: 28px;
     font-size: 16px;
     padding: 15px;
+    margin-bottom: 5px;
+  }
+
+  .contact-right textarea{
+    width: 80%;
+    height: fit-content;
   }
 
   .contact-submit {
