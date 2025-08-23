@@ -72,7 +72,7 @@ function Home() {
           // viewport={{ once: true }}
         >
           <motion.a
-            href="https://instagram.com"
+            href="https://www.instagram.com/_rnks_007"
             target="_blank"
             rel="noopener noreferrer"
             variants={iconItem}
@@ -82,7 +82,7 @@ function Home() {
           </motion.a>
 
           <motion.a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/nallakaruppannasamyr"
             target="_blank"
             rel="noopener noreferrer"
             variants={iconItem}
@@ -92,7 +92,7 @@ function Home() {
           </motion.a>
 
           <motion.a
-            href="https://github.com"
+            href="https://github.com/Nallakaruppannasamy"
             target="_blank"
             rel="noopener noreferrer"
             variants={iconItem}

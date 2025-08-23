@@ -28,13 +28,13 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* Logo */}
-      <a href="#home" className="navbar-logo" onClick={handleNavClick}>
+      <a href="#hero" className="navbar-logo" onClick={handleNavClick}>
         Portfolio<span className="dot">.</span>
       </a>
 
       {/* Desktop Links */}
       <ul className="navbar-links">
-        <li><a href="#home" className="nav-item" onClick={handleNavClick}>Home</a></li>
+        <li><a href="#hero" className="nav-item" onClick={handleNavClick}>Home</a></li>
         <li><a href="#about" className="nav-item" onClick={handleNavClick}>About Me</a></li>
         <li><a href="#education" className="nav-item" onClick={handleNavClick}>Education</a></li>
         <li><a href="#skills" className="nav-item" onClick={handleNavClick}>Skills</a></li>
@@ -53,7 +53,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <button className="close-btn" onClick={toggleMenu}>✕</button>
-        <a href="#home" className="mobile-link" onClick={handleNavClick}>Home</a>
+        <a href="#hero" className="mobile-link" onClick={handleNavClick}>Home</a>
         <a href="#about" className="mobile-link" onClick={handleNavClick}>About Me</a>
         <a href="#education" className="mobile-link" onClick={handleNavClick}>Education</a>
         <a href="#skills" className="mobile-link" onClick={handleNavClick}>Skills</a>

@@ -105,8 +105,9 @@ const About = () => {
 
           {/* Button */}
           <motion.a
-            href="#"
-            download
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn"
             whileHover={{
               scale: 1.1,
