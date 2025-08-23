@@ -1,71 +1,95 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import { FaGraduationCap, FaSchool, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 import "./Education.css";
-import Title from "../Title/Title";
-import AOS from 'aos';
-import "aos/dist/aos.css";
 
-const educationData = [
-  {
-    institution: "Sathyabama Institute of Science and Technology",
-    degree: "B.E in Electronics and Communication Engineering",
-    cgpa: "8.82 / 10.00",
-    duration: "August 2024 - Present",
-    location: "Chennai, India",
+// Container animation (stagger children)
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.3 }
   },
-  {
-    institution: "Bhuvana Krishnan Matriculation Higher Secondary School",
-    degree: "Higher Secondary Education - XII",
-    marks: "546 / 600",
-    percentage: "91%",
-    duration: "June 2023 – March 2024",
-    location: "Chennai, India",
+};
+
+// Card animations
+const cardVariants = {
+  hidden: { opacity: 0, y: 60, scale: 0.9 },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: { duration: 0.8, ease: "easeOut" }
   },
-  {
-    institution: "St. Joseph’s Matriculation School",
-    degree: "Secondary Education - X",
-    marks: "396 / 500",
-    percentage: "79.2%",
-    duration: "June 2022 – March 2023",
-    location: "Chennai, India",
+};
+
+// Icon animations
+const iconVariants = {
+  hidden: { scale: 0, rotate: -180 },
+  visible: { 
+    scale: 1, 
+    rotate: 0, 
+    transition: { type: "spring", stiffness: 120 }
   },
-];
+  hover: { scale: 1.2, rotate: 10 }
+};
 
 const Education = () => {
-
-    useEffect(() => {
-        AOS.init({
-          duration: 1000,
-          once: true,
-        });
-      }, []);
-
   return (
-    <div>
-      <div id="education" className="education-title-component" data-aos="fade-down">
-        <Title text1={"EDUCATIONAL"} text2={" QUALIFICATION"} />
-      </div>
-      <div className="education-section" data-aos="fade-up">
-        {educationData.map((edu, index) => (
-          <div className="education-card" key={index}>
-            <div className="edu-left">
-              <h3>{edu.institution}</h3>
-              <p>
-                <em>{edu.degree}</em>
-              </p>
-              {edu.cgpa && <p>• CGPA: {edu.cgpa}</p>}
-              {edu.marks && <p>• Marks Obtained: {edu.marks}</p>}
-              {edu.percentage && <p>• Percentage: {edu.percentage}</p>}
-            </div>
-            <div className="edu-right">
-              <p>
-                <em>{edu.duration}</em>
-              </p>
-              <p>{edu.location}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+    <section id="education" className="education-section">
+      {/* Title with animation */}
+      <motion.h2 
+        className="section-title"
+        initial={{ opacity: 0, y: -30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        My <span>Education</span>
+      </motion.h2>
+
+      {/* Container */}
+      <motion.div 
+        className="education-container"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        // viewport={{ once: true }}
+      >
+        {/* B.E Card */}
+        <motion.div 
+          className="education-card"
+          variants={cardVariants}
+          whileHover={{ rotateX: 5, rotateY: -5, scale: 1.05 }}
+        >
+          <h3>B.E Electronics and Communication Engineering</h3>
+          <p className="institute">
+            <motion.span variants={iconVariants} whileHover="hover">
+              <FaGraduationCap className="icon" />
+            </motion.span>
+            Sathyabama Institute of Science And Technology
+          </p>
+          <p className="details"><FaCalendarAlt className="icon" /> 2024 - Present</p>
+          <p className="details"><FaMapMarkerAlt className="icon" /> Chennai</p>
+        </motion.div>
+
+        {/* Higher Secondary Card */}
+        <motion.div 
+          className="education-card"
+          variants={cardVariants}
+          whileHover={{ rotateX: -5, rotateY: 5, scale: 1.05 }}
+        >
+          <h3>Higher Secondary (Compupter Science)</h3>
+          <p className="institute">
+            <motion.span variants={iconVariants} whileHover="hover">
+              <FaSchool className="icon" />
+            </motion.span>
+            Bhuvana Krishna Mat Hr Sec School
+          </p>
+          <p className="details"><FaCalendarAlt className="icon" /> 2022 - 2024</p>
+          <p className="details"><FaMapMarkerAlt className="icon" /> Kelambakkam, Chengalpattu</p>
+        </motion.div>
+      </motion.div>
+    </section>
   );
 };
 

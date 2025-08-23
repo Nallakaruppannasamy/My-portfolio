@@ -1,139 +1,52 @@
 import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { Menu, X, ArrowUpRight } from "lucide-react";
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(false);
-  const [menu, setMenu] = useState("home");
-
-  const handleMenuClick = (section) => {
-    setMenu(section);
-    setVisible(false); // Auto-close for side-navbar
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="navbar">
-      <h1>MY PORTFOLIO</h1>
+    <header className="navbar">
+      {/* Left Logo */}
+      <a href="#home" className="navbar-logo">
+        Portfolio<span className="dot">.</span>
+      </a>
 
-      <div className="navbar-links">
-        <ul>
-          <li className="navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "home" ? "active" : ""}`}
-              href="#home"
-              onClick={() => handleMenuClick("home")}
-            >
-              <span>Home</span>
-            </AnchorLink>
-          </li>
-          <li className="navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "about" ? "active" : ""}`}
-              offset={50}
-              href="#about"
-              onClick={() => handleMenuClick("about")}
-            >
-              <span>About</span>
-            </AnchorLink>
-          </li>
-          <li className="navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "education" ? "active" : ""}`}
-              offset={50}
-              href="#education"
-              onClick={() => handleMenuClick("education")}
-            >
-              <span>Education</span>
-            </AnchorLink>
-          </li>
-          <li className="navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "skills" ? "active" : ""}`}
-              offset={50}
-              href="#skills"
-              onClick={() => handleMenuClick("skills")}
-            >
-              <span>Skills</span>
-            </AnchorLink>
-          </li>
-          <li className="navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "contact" ? "active" : ""}`}
-              offset={50}
-              href="#contact"
-              onClick={() => handleMenuClick("contact")}
-            >
-              <span>Contact</span>
-            </AnchorLink>
-          </li>
-        </ul>
+      {/* Desktop Links */}
+      <ul className="navbar-links">
+        <a href="#home" className="nav-item">Home</a>
+        <a href="#about" className="nav-item">About me</a>
+        <a href="#education" className="nav-item">Education</a>
+        <a href="#skills" className="nav-item">Skills</a>
+        <a href="#work" className="nav-item">My Work</a>
+        <a href="#contact" className="nav-item">Contact me</a>
+      </ul>
 
-        {/* Hamburger Icon */}
-        <div className="navbar-menu-toggle" onClick={() => setVisible(true)}>
-          <FaBars size={25} color="white" />
-        </div>
+      {/* Right Side */}
+      <div className="navbar-right">
+        <a href="#contact" className="contact-btn">
+          Contact <ArrowUpRight size={16} />
+        </a>
+
+        {/* Mobile Menu Icon */}
+        <button className="menu-toggle" onClick={() => setMenuOpen(true)}>
+          <Menu size={24} />
+        </button>
       </div>
 
-      {/* Side Navbar */}
-      <div className={`side-navbar ${visible ? "side-navbar-show" : ""}`}>
-        <p style={{ textAlign: "right" }} onClick={() => setVisible(false)}>
-          <FaTimes size={25} />
-        </p>
-
-        <div className="side-navbar-links">
-          <p className="side-navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "home" ? "active" : ""}`}
-              href="#home"
-              onClick={() => handleMenuClick("home")}
-            >
-              <span>Home</span>
-            </AnchorLink>
-          </p>
-          <p className="side-navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "about" ? "active" : ""}`}
-              offset={50}
-              href="#about"
-              onClick={() => handleMenuClick("about")}
-            >
-              <span>About</span>
-            </AnchorLink>
-          </p>
-          <p className="side-navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "education" ? "active" : ""}`}
-              offset={50}
-              href="#education"
-              onClick={() => handleMenuClick("education")}
-            >
-              <span>Education</span>
-            </AnchorLink>
-          </p>
-          <p className="side-navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "skills" ? "active" : ""}`}
-              offset={50}
-              href="#skills"
-              onClick={() => handleMenuClick("skills")}
-            >
-              <span>Skills</span>
-            </AnchorLink>
-          </p>
-          <p className="side-navbar-link">
-            <AnchorLink
-              className={`anchor-link ${menu === "contact" ? "active" : ""}`}
-              offset={50}
-              href="#contact"
-              onClick={() => handleMenuClick("contact")}
-            >
-              <span>Contact</span>
-            </AnchorLink>
-          </p>
-        </div>
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+        <button className="close-btn" onClick={() => setMenuOpen(false)}>
+          <X size={24} />
+        </button>
+        <a href="#home" className="mobile-link" onClick={() => setMenuOpen(false)}>Home</a>
+        <a href="#about" className="mobile-link" onClick={() => setMenuOpen(false)}>About me</a>
+        <a href="#education" className="mobile-link" onClick={() => setMenuOpen(false)}>Eductaion</a>
+        <a href="#skills" className="mobile-link" onClick={() => setMenuOpen(false)}>Skills</a>
+        <a href="#work" className="mobile-link" onClick={() => setMenuOpen(false)}>My Work</a>
+        <a href="#contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact me</a>
       </div>
-    </div>
+    </header>
   );
 };
 

@@ -1,41 +1,162 @@
-import React, { useEffect } from "react";
-import "./Hero.css";
-import profile_img from "../../assets/profile_img.jpg";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import AOS from 'aos';
-import "aos/dist/aos.css";
-import { FaFilePdf } from "react-icons/fa";
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import { FaInstagram, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import './Hero.css';
 
-const Hero = () => {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
-  return (
-    <div id="home" className="hero-container">
-      {/* Left side of the hero section */}
-      <div className="hero-text" data-aos="fade-right">
-        <h1><span>Hello, I'm Nallakaruppannasamy</span></h1>
-        {/* <p>I'm a MERN Stack enthusiast and ECE student passionate about IT tools and modern web development.</p> */}
-        <p>MERN Stack Learner | ECE Student | Passionate Web Developer in Progress | Creating Real Projects | Future Full Stack Developer </p>
-        <div className="hero-action">
-          <div className="hero-connect"><AnchorLink className="anchor-link" offset={50} href="#contact">Connect with Me</AnchorLink></div>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="hero-resume"><FaFilePdf style={{ marginRight: "8px" }} />My Resume</a>
-
-
-        </div>
-      </div>
-
-      {/* Right side of the hero section */}
-      <div className="hero-img" data-aos="fade-left">
-        <img src={profile_img} alt="My Profile Photo" className="profile-img" />
-      </div>
-    </div>
-  );
+// Variants for staggered icons
+const iconContainer = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
 };
 
-export default Hero;
+const iconItem = {
+  hidden: { opacity: 0, y: 20, scale: 0.8 },
+  show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 100 } },
+};
+
+function Home() {
+  return (
+    <div id='home' className="app-container">
+      {/* LEFT SIDE */}
+      <motion.div
+        className="content-left"
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        // viewport={{ once: true }}
+      >
+        <motion.p
+          className="intro-text"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          // viewport={{ once: true }}
+        >
+          Hi there, I'm
+        </motion.p>
+
+        <motion.h1
+          className="name-text"
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          // viewport={{ once: true }}
+        >
+          Nallakaruppannasamy
+        </motion.h1>
+
+        <TypeAnimation
+          sequence={[
+            'I am into Frontend Development', 1500,
+            'I am into MERN Stack Development', 1500,
+            'I am into Full Stack Development', 1500,
+          ]}
+          wrapper="h2"
+          speed={50}
+          className="role-text"
+          repeat={Infinity}
+        />
+
+        {/* Social icons with staggered bounce */}
+        <motion.div
+          className="social-icons"
+          variants={iconContainer}
+          initial="hidden"
+          whileInView="show"
+          // viewport={{ once: true }}
+        >
+          <motion.a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={iconItem}
+            whileHover={{ scale: 1.2, rotate: 10 }}
+          >
+            <FaInstagram />
+          </motion.a>
+
+          <motion.a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={iconItem}
+            whileHover={{ scale: 1.2, rotate: -10 }}
+          >
+            <FaLinkedinIn />
+          </motion.a>
+
+          <motion.a
+            href="https://github.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            variants={iconItem}
+            whileHover={{ scale: 1.2, rotate: 10 }}
+          >
+            <FaGithub />
+          </motion.a>
+        </motion.div>
+
+        <motion.button
+          className="explore-button"
+          whileHover={{
+            scale: 1.05,
+            boxShadow: "0px 0px 15px rgba(100, 255, 218, 0.8)",
+          }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Explore My Work &rarr;
+        </motion.button>
+      </motion.div>
+
+      {/* RIGHT SIDE */}
+      <motion.div
+        className="content-right"
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        // viewport={{ once: true }}
+      >
+        <motion.div
+          className="animated-graphic"
+          animate={{ y: [0, -15, 0] }}
+          transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+        >
+          <motion.div
+            className="icon-brackets left-bracket"
+            animate={{ rotate: [0, -10, 10, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          >
+            &lt;
+          </motion.div>
+          <motion.div
+            className="icon-brackets right-bracket"
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+          >
+            &gt;
+          </motion.div>
+          <motion.div
+            className="inner-icon code-slash"
+            whileHover={{ scale: 1.2, color: "#64ffda" }}
+          >
+            &lt;/&gt;
+          </motion.div>
+          <motion.div
+            className="inner-icon code-braces"
+            whileHover={{ scale: 1.2, color: "#ff6489" }}
+          >
+            &#123; &#125;
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
+}
+
+export default Home;

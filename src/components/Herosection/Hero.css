@@ -1,119 +1,216 @@
-.hero-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    min-height: 80vh;
-    padding-top: 80px;
-    background-color: #1f1f28;
-    color: white;
+
+/* Main container using Flexbox for layout */
+.app-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 90vh;
+  /* padding: 0 5%; */
+  overflow: hidden;
 }
 
-.hero-text {
-  flex: 1;
-  padding: 20px;
-  margin: 20px;
-  text-align: start;
+/* Left side content */
+.content-left {
+  width: 600px;
+  max-width: 600px;
+  text-align: left;
 }
 
-.hero-text h1 {
+.intro-text {
+  font-size: 2rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+}
+
+.name-text {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.role-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--accent-color-1);
+  margin-top: 10px;
+  min-height: 80px; /* Prevents layout shift as text changes */
+}
+
+/* Social media icons */
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: var(--text-secondary);
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--accent-color-1);
+  transform: translateY(-5px);
+}
+
+/* "Explore My Work" button */
+.explore-button {
+  margin-top: 40px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--button-bg);
+  border: 1px solid var(--accent-color-1);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Right side animated graphic */
+.content-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-graphic {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Creating the rotating circular lines using pseudo-elements */
+.animated-graphic::before,
+.animated-graphic::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  box-sizing: border-box; /* Ensures border is inside the width/height */
+}
+
+.animated-graphic::before {
+  border-top-color: var(--accent-color-1);
+  border-right-color: var(--accent-color-1);
+  animation: rotate-clockwise 10s linear infinite;
+}
+
+.animated-graphic::after {
+  border-bottom-color: var(--accent-color-2);
+  border-left-color: var(--accent-color-2);
+  animation: rotate-counter-clockwise 8s linear infinite;
+}
+
+/* Inner code icons */
+.inner-icon {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  color: var(--text-secondary);
+  position: absolute;
+}
+.code-slash {
+  transform: translateY(20px);
+}
+.code-braces {
+   transform: translateY(-30px);
 }
 
-.hero-text h1 span{
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.icon-brackets {
+    position: absolute;
+    font-size: 8rem;
+    font-weight: 200;
+    /* color: var(--button-bg); */
+    color: var(--text-primary);
+    opacity: 0.8;
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #ccc;
+.left-bracket {
+    left: -30px;
 }
 
-.hero-action{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    font-size: 24px;
-    font-weight: 500;
-    margin-top: 30px;
+.right-bracket {
+    right: -30px;
 }
 
-.hero-connect{
-    padding: 15px 30px;
-    border-radius: 50px;
-    border: 2px solid #06b6d4;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+/* Keyframe animations for rotation */
+@keyframes rotate-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.hero-connect:hover{
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    transform: scale(1.05);
+@keyframes rotate-counter-clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
-.hero-resume{
-    padding: 15px 30px;
-    border-radius: 50px;
-    border: 2px solid #06b6d4;
-    text-decoration: none;
-    color: #ccc;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
 
-.hero-resume:hover{
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    transform: scale(1.05);
-}
-
-.hero-img{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.profile-img{
-    width: 370px;
-    height: 400px;
-    border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-    border: 2px #06b6d4 solid;
-    box-shadow: 0 4px 25px #06b6d4; 
-    /* object-fit: cover;  */
-}
-
-/* Media Query */
 
 @media (max-width: 768px) {
-  .hero-container {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
 
-  .hero-text {
-    padding-right: 0;
-    margin-top: 2rem;
-  }
-
-  .hero-text h1{
-    font-size: 1.5rem;
-  }
-
-  .profile-img {
-    width: 250px;
-    height: 280px;
-  }
-
-  .hero-action{
+  .app-container {
     flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 
-  .hero-resume{
-    padding: 15px 38px;
+  .content-left {
+    /* --- THIS IS THE MAIN FIX --- */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* This will center all items horizontally */
+
+    width: 90%; /* Use 90% width to have some space from the edges */
+    order: 2;
+  }
+
+  .content-right {
+    order: 1;
+    margin-bottom: 40px;
+  }
+
+  .name-text {
+    font-size: 1.5rem;
+    text-align: center; 
+  }
+
+  .role-text {
+    font-size: 1rem;
+    min-height: 60px;
+    margin-bottom: 0;
+  }
+
+  .social-icons {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .animated-graphic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .icon-brackets {
+    font-size: 6rem;
   }
 }

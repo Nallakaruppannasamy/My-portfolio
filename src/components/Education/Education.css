@@ -1,86 +1,106 @@
-.education-title-component {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #e2e8f0;
-  margin-bottom: 10px;
-}
 
 .education-section {
-  padding: 60px 30px;
-  background-color: #1e1e28;
-  color: #fff;
-  font-family: 'Inter', sans-serif;
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 4rem 2rem;
+  text-align: center;
 }
 
-.education-card {
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.section-title span {
+  color: var(--accent-color-1);
+}
+
+/* Card Container */
+.education-container {
   display: flex;
-  justify-content: space-between;
-  background-color: #2a2a32;
-  padding: 25px;
-  /* margin: 45px; */
-  margin-top: 15px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
-  transition: transform 0.3s ease;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5rem;
+}
+
+/* Card */
+.education-card {
+  background: #112240;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  width: 520px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .education-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.35);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.4);
 }
 
-.edu-left h3 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: #ffffff;
+.education-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
-.edu-left p {
-  margin: 6px 0;
-  color: #cbd5e1;
-  font-size: 15px;
+.institute {
+  color: var(--accent-color-1);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.edu-right {
-  text-align: right;
+.details {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.3rem 0;
 }
 
-.edu-right p {
-  margin: 4px 0;
-  color: #94a3b8;
-  font-size: 14px;
+.icon {
+  color: var(--accent-color-1);
+  font-size: 1.1rem;
 }
 
+/* ===================== */
+/* Responsive Design */
+/* ===================== */
 @media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
 
-    .education-title-component {
-        font-size: 1.8rem;
-        padding: 0 10px;
-        line-height: 1.3;
-    }
+  .education-card {
+    width: 90%;
+  }
 
-    .education-card {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .edu-right {
-        text-align: left;
-        margin-top: 10px;
-    }
-
-}
-
-@media (max-width: 480px) {
-  .education-title-component {
-    font-size: 1.5rem;
+  .section-title {
+    font-size: 2rem;
   }
 }
 
-@media (min-width: 768px) {
-  .education-card{
-    margin: 45px;
-    margin-top: 10px;
+@media (max-width: 480px) {
+  .education-card {
+    padding: 1.5rem;
+  }
+
+  .education-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .icon {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
   }
 }

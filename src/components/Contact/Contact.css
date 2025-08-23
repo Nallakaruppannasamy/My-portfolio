@@ -1,6 +1,8 @@
-.contact{
-  background-color: #1f1f28;
-  color: #fff;
+
+
+.contact {
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,109 +15,114 @@
 .contact-title-component {
   text-align: center;
   font-size: 2.5rem;
-  color: #e2e8f0;
-  /* margin-bottom: 10px; */
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
-.contact-section{
-    display: flex;
-    gap: 100px;
+.contact-title-component span {
+  color: var(--accent-color-1);
 }
 
-.contact-left{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+.contact-section {
+  display: flex;
+  gap: 100px;
 }
 
-.contact-left h1{
-    font-size: 80px;
-    font-weight: 700;
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.contact-left p{
-    max-width: 550px;
-    color: #D8D8D8;
-    font-size: 20px;
-    line-height: 35px;
+.contact-left h1 {
+  font-size: 80px;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--accent-color-2), var(--accent-color-1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.contact-details{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    color: #D8D8D8;
-    font-size: 22px;
+.contact-left p {
+  max-width: 550px;
+  color: var(--text-secondary);
+  font-size: 20px;
+  line-height: 35px;
 }
 
-.contact-detail{
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--text-secondary);
+  font-size: 22px;
 }
 
-.contact-detail img{
-    width: 40px;
-    height: 40px;
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: 0.3s ease;
 }
 
-.contact-right{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
+.contact-detail img {
+  width: 40px;
+  height: 40px;
 }
 
-.contact-right label{
-    color: #D8D8D8;
-    font-size: 22px;
-    font-weight: 500;
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 30px;
 }
 
-.contact-right input{
-    border: none;
-    width: 700px;
-    height: 78px;
-    padding-left: 20px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
+.contact-right label {
+  color: var(--text-secondary);
+  font-size: 22px;
+  font-weight: 500;
 }
 
-.contact-right textarea{
-    width: 650px;
-    border: none;
-    padding: 25px;
-    border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
-    font-family: Outfit;
-    font-size: 20px;
+.contact-right input {
+  border: none;
+  width: 700px;
+  height: 78px;
+  padding-left: 20px;
+  border-radius: 4px;
+  background: #32323c;
+  color: var(--text-primary);
+  font-family: Outfit;
+  font-size: 20px;
 }
 
-.contact-submit{
-    border: none;
-    color: white;
-    border-radius: 50px;
-    background: linear-gradient(to right, #ff6a00, #ee0979);
-    font-size: 22px;
-    padding: 20px 60px;
-    margin-bottom: 50px;
-    cursor: pointer;
-    transition: 0.3s;
+.contact-right textarea {
+  width: 650px;
+  border: none;
+  padding: 25px;
+  border-radius: 4px;
+  background: #32323c;
+  color: var(--text-primary);
+  font-family: Outfit;
+  font-size: 20px;
 }
 
-.contact-submit:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+.contact-submit {
+  border: none;
+  color: white;
+  border-radius: 50px;
+  background: linear-gradient(to right, var(--accent-color-2), var(--accent-color-1));
+  font-size: 22px;
+  padding: 20px 60px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.contact-submit:hover {
+  opacity: 0.9;
+}
+
+/* -------- Responsive -------- */
 
 @media (max-width: 1024px) {
   .contact {
@@ -162,7 +169,6 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .contact {
     margin: 30px 20px;
@@ -195,15 +201,15 @@
     font-size: 18px;
   }
 
-  .contact-right input{
+  .contact-right input {
     width: 80%;
-    height: 28px;
+    height: 48px;
     font-size: 16px;
     padding: 15px;
     margin-bottom: 5px;
   }
 
-  .contact-right textarea{
+  .contact-right textarea {
     width: 80%;
     height: fit-content;
   }

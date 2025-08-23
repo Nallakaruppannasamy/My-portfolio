@@ -1,10 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { motion } from "framer-motion";
 import "./Skills.css";
-import Title from '../Title/Title.jsx';
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { assets } from "../../assets/assets.js";
-
+import { assets } from "../../assets/assets";
 
 const skills = [
   { name: "HTML", logo: assets.html_logo },
@@ -24,29 +21,61 @@ const skills = [
   { name: "Canva", logo: assets.canva_logo },
 ];
 
+// Framer Motion Variants
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 80 } },
+};
 
 const Skills = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
   return (
     <section id="skills" className="skills-section">
-      <div className="skill-title-component" data-aos="fade-down">
-        <Title text1={"MY"} text2={" SKILLS"} />
-      </div>
+      {/* Title */}
+      <motion.h2
+        className="skills-heading"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        // viewport={{ once: true }}
+      >
+        MY <span>SKILLS</span>
+      </motion.h2>
 
-      <div className="skills-grid" data-aos="fade-up">
+      {/* Skill Cards */}
+      <motion.div
+        className="skills-grid"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        // viewport={{ once: true }}
+      >
         {skills.map((skill, index) => (
-          <div className="skill-card" key={index}>
-            <img src={skill.logo} alt={`${skill.name} logo`} className="skill-logo" />
+          <motion.div
+            className="skill-card"
+            key={index}
+            variants={cardVariants}
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <img
+              src={skill.logo}
+              alt={`${skill.name} logo`}
+              className="skill-logo"
+            />
             <p className="skill-name">{skill.name}</p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
