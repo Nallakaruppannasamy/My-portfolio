@@ -1,0 +1,156 @@
+/* MyWork.css */
+
+.work-section {
+  background: var(--primary-bg);
+  color: var(--text-primary);
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--text-primary);
+}
+
+.work-heading span {
+  color: var(--accent-color-1); 
+}
+
+/* Grid layout for the projects */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Individual project card styling */
+.work-card {
+  background: #112240; /* A slightly lighter shade from your theme */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.work-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 66.66%; /* 3:2 Aspect Ratio */
+  overflow: hidden;
+}
+
+.work-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-out;
+}
+
+.work-card:hover .work-image {
+  transform: scale(1.1);
+}
+
+/* Overlay that appears on hover */
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.85); /* Dark overlay */
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.work-card:hover .work-overlay {
+  opacity: 1;
+}
+
+.work-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.work-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.work-links a {
+  color: var(--accent-color-1);
+  font-size: 1.8rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.work-links a:hover {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+/* Info section below the image */
+.work-info {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.work-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.work-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.work-tech span {
+  background: var(--button-bg);
+  color: var(--accent-color-1);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 50px;
+}
+
+/* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
+  .work-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px; /* Center the single column on tablets/mobiles */
+  }
+
+  .work-heading {
+    font-size: 2.2rem;
+  }
+}

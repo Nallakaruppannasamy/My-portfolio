@@ -16,7 +16,10 @@ import mail_logo from './MAIL_logo.svg'
 import call_logo from './CALL_logo.png'
 import location_logo from './LOCATION_logo.png'
 import expressjs_logo from './EXPRESSJS_logo.svg'
-import profileImg from './profile_img.jpg';
+import profileImg from './profile_img.jpg'
+import chatAppImg from './chat_app_img.png'
+import ezybuyImg from './ezybuy_img.png'
+import portfolioImg from './portfolio_img.png'
 
 
 export const assets = {
@@ -38,5 +41,8 @@ export const assets = {
     call_logo,
     location_logo,
     expressjs_logo,
-    profileImg
+    profileImg,
+    chatAppImg,
+    ezybuyImg,
+    portfolioImg
 }
