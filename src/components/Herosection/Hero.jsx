@@ -22,7 +22,7 @@ const iconItem = {
 
 function Home() {
   return (
-    <div id='home' className="app-container">
+    <div id='hero' className="app-container">
       {/* LEFT SIDE */}
       <motion.div
         className="content-left"
